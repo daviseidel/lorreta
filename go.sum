@@ -1,2 +1,10 @@
+github.com/daviseidel/xlib v0.0.0-20231228223631-f82a260f2199 h1:+h8GNEcp+mujxfR7HaImd7SlBYHdxET591MPQzMVkQk=
+github.com/daviseidel/xlib v0.0.0-20231228223631-f82a260f2199/go.mod h1:LBTwOhsukDM3SIIXtiW52x2I9YQI2rxCFEP/Nl7Rn4o=
+github.com/daviseidel/xlib v0.0.0-20231228225630-da4601fa66b2 h1:fJcjPE215FX8iU6OXE7YMG/UXGkA+3myuCmrddENMvE=
+github.com/daviseidel/xlib v0.0.0-20231228225630-da4601fa66b2/go.mod h1:LBTwOhsukDM3SIIXtiW52x2I9YQI2rxCFEP/Nl7Rn4o=
+github.com/daviseidel/xlib v0.0.0-20231228230617-2b8f9ed24e94 h1:8TflVTLtiyhXys6EIU3cnm6+dpoOsphBG6aZdLmU8YM=
+github.com/daviseidel/xlib v0.0.0-20231228230617-2b8f9ed24e94/go.mod h1:LBTwOhsukDM3SIIXtiW52x2I9YQI2rxCFEP/Nl7Rn4o=
+github.com/daviseidel/xlib v0.0.0-20231229001439-b44f96f41c3e h1:+Vb8Lg4998HE98S+PSEJ5FEktnbnufBhDSBdmwo3vDA=
+github.com/daviseidel/xlib v0.0.0-20231229001439-b44f96f41c3e/go.mod h1:LBTwOhsukDM3SIIXtiW52x2I9YQI2rxCFEP/Nl7Rn4o=
 github.com/vbsw/xlib v0.1.0 h1:ZBnQVzvRhHCKzivWMy4Dc8SXe8DGFkDYGyjwnN5huDo=
 github.com/vbsw/xlib v0.1.0/go.mod h1:7IxOCnGk41Mv08U1u6Vjlq53QZ7JuFGeKjgI2BYYrTQ=

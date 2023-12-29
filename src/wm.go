@@ -1,15 +1,22 @@
 package wm
 
+/*
+#cgo LDFLAGS: -lX11
+#include <X11/Xlib.h>
+
+#define MAX(a, b) ((a) > (b) ? (a) : (b))
+*/
+import "C"
 import (
-	"fmt"
 	"log"
 
-	"github.com/vbsw/xlib"
+	"github.com/daviseidel/xlib"
 )
 
 type WindowManager struct {
-	Display *xlib.Display
-	Root    xlib.Window
+	Display          *xlib.Display
+	Root             xlib.Window
+	WindowAttributes xlib.WindowAttributes
 }
 
 func (wm *WindowManager) Create() *WindowManager {
@@ -31,7 +38,37 @@ func (wm *WindowManager) Destroy() {
 }
 
 func (WindowManager *WindowManager) Run() {
-	fmt.Println("Hello, World!")
+	xlib.XGrabKey(
+		WindowManager.Display,
+		xlib.XKeysymToKeycode(WindowManager.Display, xlib.XStringToKeysym("F1")),
+		int(xlib.Mod1Mask),
+		WindowManager.Root,
+		1,
+		xlib.GrabModeAsync,
+		xlib.GrabModeAsync)
+	xlib.XGrabButton(
+		WindowManager.Display,
+		1,
+		int(xlib.Mod1Mask),
+		WindowManager.Root,
+		xlib.Bool(1),
+		xlib.ButtonPressMask|xlib.ButtonReleaseMask|xlib.PointerMotionMask,
+		xlib.GrabModeAsync,
+		xlib.GrabModeAsync,
+		C.None,
+		C.None)
+	xlib.XGrabButton(
+		WindowManager.Display,
+		1,
+		int(xlib.Mod1Mask),
+		WindowManager.Root,
+		xlib.Bool(1),
+		xlib.ButtonPressMask|xlib.ButtonReleaseMask|xlib.PointerMotionMask,
+		xlib.GrabModeAsync,
+		xlib.GrabModeAsync,
+		C.None,
+		C.None)
+
 }
 
 func (wm *WindowManager) checkOtherWM() {
