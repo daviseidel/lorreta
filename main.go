@@ -5,5 +5,10 @@ import (
 )
 
 func main() {
-	log.Fatal("Not implemented")
+	wm := new(WindowManager).Create()
+	if wm == nil {
+		log.Fatal("Cannot create window manager")
+	}
+	defer wm.Destroy()
+	wm.Run()
 }

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Lorreta
+Comment=A tiny window manager
+Exec=autostart.sh
+Terminal=False
+TryExec=lorreta
+Type=Application
+
+[Window Manager]
+SessionManaged=true
